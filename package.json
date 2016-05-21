@@ -1,0 +1,64 @@
+{
+  "name": "metadata-subscriber",
+  "version": "0.0.1",
+  "description": "Listens for state events from iiif-viewer, fetches and displays associated metadata",
+  "homepage": "https://github.com/blumenbach/metadata-subscriber",
+  "repository": "blumenbach/metadata-subscriber",
+  "author": "Christopher Johnson",
+  "files": [
+    "dist"
+  ],
+  "main": "dist/index.js",
+  "keywords": [
+    "iiif"
+  ],
+  "dependencies": {
+    "node-redis": "latest",
+    "redis-parser": "latest",
+    "node-rest-client": "latest"
+  },
+  "devDependencies": {
+    "brfs": "latest",
+    "browserify": "latest",
+    "browserify-shim": "latest",
+    "browserify-transform-tools": "latest",
+    "connect": "latest",
+    "exorcist": "latest",
+    "gulp": "latest",
+    "gulp-autoprefixer": "latest",
+    "gulp-bump": "latest",
+    "gulp-concat": "latest",
+    "gulp-connect": "latest",
+    "gulp-cssimport": "latest",
+    "gulp-embedlr": "latest",
+    "gulp-filter": "latest",
+    "gulp-git": "latest",
+    "gulp-jsvalidate": "latest",
+    "gulp-livereload": "latest",
+    "gulp-clean-css": "latest",
+    "gulp-notify": "latest",
+    "gulp-rename": "latest",
+    "gulp-sass": "latest",
+    "gulp-sourcemaps": "latest",
+    "gulp-streamify": "latest",
+    "gulp-tag-version": "latest",
+    "gulp-uglify": "latest",
+    "jshint": "latest",
+    "node-sass": "latest",
+    "require-dir": "latest",
+    "run-sequence": "latest",
+    "stream-browserify": "latest",
+    "vinyl-buffer": "latest",
+    "vinyl-source-stream": "latest",
+    "vinyl-transform": "latest",
+    "watchify": "latest"
+  },
+  "browserify": {
+    "transform": [ "browserify-shim" ]
+  },
+  "browserify-shim": {
+    "jQuery": "global:jQuery"
+  },
+  "scripts": {},
+  "license": "Apache-2.0"
+}

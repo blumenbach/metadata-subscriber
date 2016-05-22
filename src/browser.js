@@ -1,0 +1,1 @@
+window.metasub = require('./subscriber-cli');

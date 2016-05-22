@@ -1,22 +1,10 @@
-var redis = require("redis"),
-    subscriber = redis.createClient({"return_buffers": true}),
-    Client = require('node-rest-client').Client,
-    msgpack = require('msgpack-js');
+"use strict";
 
+require('./subscriber-widget.js');
+var $ = require('jquery');
+require('bootstrap');
+module.exports.$ = $;
 
-subscriber.on("message", function(channel, res) {
-    var client = new Client();
-    var args = {
-        headers: {"Accept": "application/json"}
-    };
-    var message = msgpack.decode(res);
-    var uri = message.data[1].data;
-    console.log(uri);
-       client.get(uri, args, function (data, response) {
-           console.log(data);
-          // console.log(response);
-       });    
+$(function ($) {
+    $('.metadata-subscriber').subscriber({ });
 });
-
-subscriber.subscribe("meta#/#");
-

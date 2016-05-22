@@ -1,11 +1,44 @@
-<!DOCTYPE html>
-<html ng-app="json.ui">
+<!doctype html>
+<html lang="en">
 <head>
-<link href="./json-viewer/jquery.json-viewer.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <title>Metadata Subscriber</title>
+    <script src="deps/metasub-browser.js"></script>
+    <script src="deps/jquery-2.1.0.js"></script>
+    <script src="dist/metadata-subscriber.min.js"></script>
+    <link rel=stylesheet href="dist/metadata-subscriber.min.css">
+    <link rel=stylesheet href="http://fonts.googleapis.com/css?family=Open+Sans:300,400italic,700italic,400,700">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1">
 </head>
 <body>
-<pre id="json-viwer"></pre>
-<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-<script src="./json-viewer/jquery.json-viewer.js"></script>
+<!--[if lte IE 9]><b>Your browser is unsupported.</b><div style="display:none"><![endif]-->
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Metadata Subscriber</a>
+        </div>
+    </div>
+</nav>
+<main>
+    <fieldset class="metadata-subscriber">
+        <ul>
+            <li>
+                <label>Subscriber Results</label>
+                <pre class="results"></pre>
+            </li>
+            <li>
+                <label>Raw results</label>
+                <pre class="raw"></pre>
+            </li>
+            <li>
+                <label>Execution log</label>
+                <pre class="log"></pre>
+            </li>
+        </ul>
+    </fieldset>
+</main>
+
+<footer>
+</footer>
 </body>
 </html>

@@ -43,9 +43,9 @@ gulp.task('tag', function() {
 });
 
 
-gulp.task('bumpPatch', function() { return inc('patch'); })
-gulp.task('bumpMinor', function() { return inc('minor'); })
-gulp.task('bumpMajor', function() { return inc('major'); })
+gulp.task('bumpPatch', function() { return inc('patch'); });
+gulp.task('bumpMinor', function() { return inc('minor'); });
+gulp.task('bumpMajor', function() { return inc('major'); });
 
 gulp.task('patch', function() {
 	runSequence('bumpPatch', 'default', 'commitDist', 'tag', 'publish', 'push');

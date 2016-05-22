@@ -9,12 +9,13 @@ subscriber.on("message", function(channel, res) {
     var args = {
         headers: {"Accept": "application/json"}
     };
-    var uri = msgpack.decode(res);
+    var message = msgpack.decode(res);
+    var uri = message.data[1].data;
     console.log(uri);
-    client.get(uri, args, function (meta, response) {
-        console.log(meta);
-        console.log(response);
-    });
+       client.get(uri, args, function (data, response) {
+           console.log(data);
+          // console.log(response);
+       });    
 });
 
 subscriber.subscribe("meta#/#");
